@@ -26,4 +26,3 @@
             return $this->db->delete('postagem');
         }
     }
-?>

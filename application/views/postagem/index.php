@@ -14,9 +14,9 @@
         <tbody>
             <?php foreach ($postagens as $postagem): ?>
                 <tr>
-                    <td><?= $postagem['titulo']?></td>
-                    <td><?=anchor('PostagemController/edicao/'.$postagem['id'],'Editar')?></td>
-                    <td><?=anchor('PostagemController/excluir/'.$postagem['id'],'Excluir')?></td>
+                    <td><?=anchor('postagem-visualizar/'.$postagem['id'], $postagem['titulo'])?></td>
+                    <td><?=anchor('postagem-editar/'.$postagem['id'],'Editar')?>
+                    <td><?=anchor('postagem-excluir/'.$postagem['id'],'Excluir')?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

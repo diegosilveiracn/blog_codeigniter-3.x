@@ -22,7 +22,7 @@
             redirect();
         }
 
-        public function edicao($id){
+        public function editar($id){
             $parametros['titulo'] = 'Edição de Postagem';
             $parametros['postagem'] =  $this->Postagem->get($id);
             $this->load->view('cabecalho',$parametros);
@@ -40,5 +40,12 @@
             $this->Postagem->deletar($id);
             redirect();
         }
+
+        public function visualizar($id){
+            $parametros['postagem'] =  $this->Postagem->get($id);
+            $parametros['titulo'] = $parametros['postagem']['titulo'];
+            $this->load->view('cabecalho',$parametros);
+            $this->load->view('postagem/visualizacao',$parametros);
+            $this->load->view('rodape');
+        }
     }
-?>

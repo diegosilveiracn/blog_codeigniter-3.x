@@ -12,3 +12,4 @@
     </table>
     <input type="submit" value="Atualizar"/>
 <?=form_close()?>
+<?=anchor('postagem','Voltar')?>

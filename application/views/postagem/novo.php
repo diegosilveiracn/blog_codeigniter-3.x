@@ -11,3 +11,4 @@
     </table>
     <input type="submit" value="Salvar"/>
 <?=form_close()?>
+<?=anchor('postagem','Voltar')?>
