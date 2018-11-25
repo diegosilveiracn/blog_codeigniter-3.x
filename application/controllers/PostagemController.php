@@ -19,6 +19,7 @@
         public function salvar(){
             $postagem = $this->input->post();
             $this->Postagem->inserir($postagem);
+            $this->session->set_flashdata('success', 'Postagem cadastrada com sucesso!');
             redirect();
         }
 
@@ -33,17 +34,19 @@
         public function atualizar(){
             $postagem = $this->input->post();
             $this->Postagem->atualizar($postagem);
+            $this->session->set_flashdata('success', 'Postagem atualizada com sucesso!');
             redirect();
         }
 
         public function excluir($id){
             $this->Postagem->deletar($id);
+            $this->session->set_flashdata('success', 'Postagem excluída com sucesso!');
             redirect();
         }
 
         public function visualizar($id){
+            $parametros['titulo'] = 'Postagem';
             $parametros['postagem'] =  $this->Postagem->get($id);
-            $parametros['titulo'] = $parametros['postagem']['titulo'];
             $this->load->view('cabecalho',$parametros);
             $this->load->view('postagem/visualizacao',$parametros);
             $this->load->view('rodape');
