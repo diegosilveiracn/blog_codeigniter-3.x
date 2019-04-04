@@ -9,6 +9,14 @@
             $this->load->view('rodape');
         }
 
+        public function visualizar($id){
+            $parametros['titulo'] = 'Postagem';
+            $parametros['postagem'] =  $this->Postagem->get($id);
+            $this->load->view('cabecalho',$parametros);
+            $this->load->view('postagem/visualizacao',$parametros);
+            $this->load->view('rodape');
+        }
+
         public function novo(){
             $parametros['titulo'] = 'Nova Postagem';
             $this->load->view('cabecalho',$parametros);
@@ -42,13 +50,5 @@
             $this->Postagem->deletar($id);
             $this->session->set_flashdata('success', 'Postagem excluída com sucesso!');
             redirect();
-        }
-
-        public function visualizar($id){
-            $parametros['titulo'] = 'Postagem';
-            $parametros['postagem'] =  $this->Postagem->get($id);
-            $this->load->view('cabecalho',$parametros);
-            $this->load->view('postagem/visualizacao',$parametros);
-            $this->load->view('rodape');
         }
     }
