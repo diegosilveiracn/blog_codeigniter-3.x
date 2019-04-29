@@ -1,4 +1,4 @@
-<?=form_open('postagem-atualizar')?>
+<?=form_open('postagem/atualizar')?>
     <input type="hidden" name="id" value="<?=$postagem['id']?>">
     <table>
         <tr>
@@ -12,4 +12,4 @@
     </table>
     <input type="submit" value="Atualizar"/>
 <?=form_close()?>
-<?=anchor('postagem','Voltar')?>
+<?=anchor('postagem/index','Voltar')?>

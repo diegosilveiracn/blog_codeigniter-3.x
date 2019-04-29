@@ -53,10 +53,10 @@ $route['default_controller'] = 'PostagemController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['postagem'] = "PostagemController";
-$route['postagem-novo'] = "PostagemController/novo";
-$route['postagem-salvar'] = "PostagemController/salvar";
-$route['postagem-editar/(:num)'] = "PostagemController/editar/$1";
-$route['postagem-atualizar'] = "PostagemController/atualizar";
-$route['postagem-excluir/(:num)'] = "PostagemController/excluir/$1";
-$route['postagem-visualizar/(:num)'] = "PostagemController/visualizar/$1";
+$route['postagem/index'] = "PostagemController";
+$route['postagem/novo'] = "PostagemController/novo";
+$route['postagem/salvar'] = "PostagemController/salvar";
+$route['postagem/editar/(:num)'] = "PostagemController/editar/$1";
+$route['postagem/atualizar'] = "PostagemController/atualizar";
+$route['postagem/excluir/(:num)'] = "PostagemController/excluir/$1";
+$route['postagem/visualizar/(:num)'] = "PostagemController/visualizar/$1";

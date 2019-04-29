@@ -1,4 +1,4 @@
-<?=form_open('postagem-salvar')?>
+<?=form_open('postagem/salvar')?>
     <table>
         <tr>
             <td>Título</td>
@@ -11,4 +11,4 @@
     </table>
     <input type="submit" value="Salvar"/>
 <?=form_close()?>
-<?=anchor('postagem','Voltar')?>
+<?=anchor('postagem/index','Voltar')?>

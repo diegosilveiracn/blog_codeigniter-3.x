@@ -1,4 +1,4 @@
-<?=anchor('postagem-novo','Nova Postagem')?>
+<?=anchor('postagem/novo','Nova Postagem')?>
 
 <?php if ($postagens == FALSE): ?>
     <h3>Nenhuma postagem encontrada</h3>
@@ -14,9 +14,9 @@
         <tbody>
             <?php foreach ($postagens as $postagem): ?>
                 <tr>
-                    <td><?=anchor('postagem-visualizar/'.$postagem['id'], $postagem['titulo'])?></td>
-                    <td><?=anchor('postagem-editar/'.$postagem['id'],'Editar')?>
-                    <td><?=anchor('postagem-excluir/'.$postagem['id'],'Excluir')?></td>
+                    <td><?=anchor('postagem/visualizar/'.$postagem['id'], $postagem['titulo'])?></td>
+                    <td><?=anchor('postagem/editar/'.$postagem['id'],'Editar')?>
+                    <td><?=anchor('postagem/excluir/'.$postagem['id'],'Excluir')?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
