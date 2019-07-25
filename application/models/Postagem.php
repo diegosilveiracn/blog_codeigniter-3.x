@@ -1,6 +1,11 @@
 <?php
     class Postagem extends CI_Model {
-        
+
+        function getAll() {
+            $query = $this->db->get('postagem');
+            return $query->result_array();
+        }
+
         function get($id=null) {
             if($id){
                 $this->db->where('id', $id);
