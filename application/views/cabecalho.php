@@ -11,5 +11,3 @@
         <?php if ($this->session->flashdata('success') == TRUE): ?>
             <h2><?=$this->session->flashdata('success')?></h2>
         <?php endif; ?>
-        
-        <h1><?=$titulo?></h1>

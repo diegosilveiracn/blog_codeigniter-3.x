@@ -1,3 +1,5 @@
+<h1>Postagens</h1>
+
 <?=anchor('postagem/novo','Nova Postagem')?>
 
 <?php if ($postagens == FALSE): ?>

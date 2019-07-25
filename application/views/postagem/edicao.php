@@ -1,3 +1,5 @@
+<h1>Edição de Postagem</h1>
+
 <?=form_open('postagem/atualizar')?>
     <input type="hidden" name="id" value="<?=$postagem['id']?>">
     <table>

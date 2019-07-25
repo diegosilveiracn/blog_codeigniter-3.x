@@ -1,3 +1,5 @@
+<h1>Nova Postagem</h1>
+
 <?=form_open('postagem/salvar')?>
     <table>
         <tr>
