@@ -25,7 +25,7 @@
             $postagem = $this->input->post();
             $this->Postagem->inserir($postagem);
             $this->session->set_flashdata('success', 'Postagem cadastrada com sucesso!');
-            redirect();
+            redirect('postagem/index');
         }
 
         public function editar($id){
@@ -39,7 +39,7 @@
             $postagem = $this->input->post();
             $this->Postagem->atualizar($postagem);
             $this->session->set_flashdata('success', 'Postagem atualizada com sucesso!');
-            redirect();
+            redirect('postagem/index');
         }
 
         public function excluir($id){
